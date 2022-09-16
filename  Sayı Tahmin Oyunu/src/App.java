@@ -50,19 +50,17 @@ public class App {
 
                     System.out.println("verilen cevaplar: ");
 
-                    
+                    System.out.println("Tahmin edilen sayilar: ");
+                    for (int a : wrongs) {
+                        if (a != 0) {
+                            System.out.println(a);
+                        }
+
+                    }
 
                 }
 
             }
-            
-            }
-
-            System.out.println("Tahmin edilen sayilar: ");
-            for(int a:wrongs){
-                if(a!=0){
-                    System.out.println(a);
-                }
 
         }
 
