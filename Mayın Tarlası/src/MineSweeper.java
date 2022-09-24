@@ -73,16 +73,7 @@ public class MineSweeper {
         // }
 
         // OYUNU EKRANA YAZDIRMA
-        for (int i = 0; i < line; i++) {
-
-            for (int j = 0; j < column; j++) {
-
-                System.out.print(game[i][j]);
-
-            }
-            System.out.println();
-        }
-        System.out.println("-------------------");
+       
 
         for (int i = 0; i < line; i++) {
 
@@ -280,6 +271,7 @@ public class MineSweeper {
             rounds--;
 
         }
+        
 
         for (int i = 0; i < line - 1; i++) {
             for (int j = 0; j < column - 1; j++) {
@@ -300,7 +292,9 @@ public class MineSweeper {
 
             }
             System.out.println();
+            
         }
+        
 
     }
 
