@@ -9,6 +9,7 @@ public class MineSweeper {
     int selected_line;
     int selected_column;
     int count;
+    boolean isWin = false;
 
     public MineSweeper(int line, int column) {
         this.line = line;
@@ -31,15 +32,7 @@ public class MineSweeper {
 
         }
 
-        // for (int i = 0; i < line; i++) {
-
-        // for (int j = 0; j < column; j++) {
-
-        // System.out.print(game[i][j]);
-
-        // }
-        // System.out.println();
-        // }
+        
         // GAMEİN MAYINLANMA AŞAMASI
         while (mines > 0) {
 
@@ -59,11 +52,10 @@ public class MineSweeper {
                 }
             }
 
-            if (mines == 0) {
-                break;
-            }
+            
 
         }
+       
         // GAMEİN MAYINLANMA AŞAMASI
 
         // for (int i = 0; i < line - 1; i++) {
@@ -73,7 +65,6 @@ public class MineSweeper {
         // }
 
         // OYUNU EKRANA YAZDIRMA
-       
 
         for (int i = 0; i < line; i++) {
 
@@ -104,7 +95,7 @@ public class MineSweeper {
             System.out.print("Sütün giriniz: ");
             selected_column = scan.nextInt();
 
-            if (board[selected_line][selected_column] == " * ") {
+            if (game[selected_line][selected_column] == " * ") {
                 System.out.println("OYUN KAYBEDİLDİ");
                 break;
             } else if (selected_line == 0) {
@@ -271,7 +262,6 @@ public class MineSweeper {
             rounds--;
 
         }
-        
 
         for (int i = 0; i < line - 1; i++) {
             for (int j = 0; j < column - 1; j++) {
@@ -281,8 +271,9 @@ public class MineSweeper {
                 }
             }
         }
+        if (rounds == 0)
 
-        System.out.println("TEBRİKLER KAZANDINIZ!!");
+            System.out.println("TEBRİKLER KAZANDINIZ!!");
         System.out.println("-----------------------------------------------");
         for (int i = 0; i < line; i++) {
 
@@ -292,9 +283,8 @@ public class MineSweeper {
 
             }
             System.out.println();
-            
+
         }
-        
 
     }
 
